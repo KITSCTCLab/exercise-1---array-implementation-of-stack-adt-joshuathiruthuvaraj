@@ -1,28 +1,34 @@
+import os
 class Stack:
     def __init__(self, size):
         self.items = []
         self.size = size
-        self.top=-1
 
     def is_empty(self):
-        return self.top==-1
+        # Write code here
+        if len(self.items) == 0:
+            return True
 
     def is_full(self):
-        return self.top==self.size-1
+        # Write code here
+        if len(self.items) >= size:
+            return True
 
     def push(self, data):
         if not self.is_full():
-            self.top+=1
-            self.items.append(values[1])
+            # Write code here
+            self.items.append(data)
 
     def pop(self):
         if not self.is_empty():
-            del self.items[self.top]
-            self.top-=1
-    def status(self):
-        for i in self.items:
-            print(i)
+            # Write code here
+            x = self.items.pop()
+            return x
 
+    def status(self):
+        # Write code here
+        for item in self.items:
+            print(item)
 
 # Do not change the following code
 size, queries = map(int, input().rstrip().split())
